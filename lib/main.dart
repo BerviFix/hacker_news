@@ -56,7 +56,11 @@ class HomePage extends StatelessWidget {
       itemBuilder: (context, index) {
         return ListTile(
           contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-          leading: IconButton(onPressed: () {}, icon: Icon(Icons.exit_to_app)),
+          leading: IconButton(
+              onPressed: () {
+                launch(posts[index].link);
+              },
+              icon: Icon(Icons.exit_to_app)),
           title: Text(posts[index].title),
           subtitle: Text('by ${posts[index].author}'),
         );
