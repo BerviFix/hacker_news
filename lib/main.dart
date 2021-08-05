@@ -13,7 +13,7 @@ class Post {
   factory Post.fromData(dynamic data) {
     final title = data['title'];
     final author = data['by'];
-    final link = data['url'];
+    final link = data['url'] ?? "";
 
     return Post(title, author, link);
   }
